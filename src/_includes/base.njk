@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="description" content="A composable CSS layout primitive.">
+  <title>{{ title }}</title>
+
+</head>
+<body>
+ <h1>{{ title }}</h1>
+<header class="header-primary">
+      <a class="logo-website" href="/">Luke Jones</a>
+      <nav class="header-nav">
+          <ul class="header-nav-list">
+              <li><a class="nav-link" href="/about">About</a></li>
+              <li><a class="nav-link" href="/blog">Blog</a></li>
+          </ul>
+      </nav>
+  </header>
+ <header>
+ <picture>
+  <source media="(min-width: 50em)" sizes="50vw" srcset="/assets/img/fred-affiche.jpg">
+  <img sizes="100vw" src="/assets/img/fred-affiche.jpg">
+</picture>
+ <!--<p><img src="https://res.cloudinary.com/wikilouis/image/upload/w_1280,h_853,f_auto/fredmaher.jpg" class="cld-responsive" alt="Image de Fred Maher"></p>-->
+</header>
+
+{{ content | safe }}
+
+
+
+<footer>TEST</footer>
+<script
+        src="/assets/scripts/shrinkwrap.min.js"> </script> 
+        <script>
+        var cl = cloudinary.Cloudinary.new({
+            cloud_name: "wikilouis"
+        });
+        // replace 'demo' with your cloud name in the line above 
+        cl.responsive();
+    </script>
+</body>
+</html>
